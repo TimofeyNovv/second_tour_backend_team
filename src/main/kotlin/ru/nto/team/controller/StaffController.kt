@@ -1,6 +1,7 @@
-package ru.nto.team
+package ru.nto.team.controller
 
 import org.springframework.web.bind.annotation.*
+import ru.nto.team.service.StaffService
 
 // TODO: complete auth API behavior; this compilable route delegates to an unfinished service.
 @RestController

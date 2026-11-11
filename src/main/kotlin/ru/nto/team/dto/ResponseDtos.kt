@@ -1,4 +1,4 @@
-package ru.nto.team
+package ru.nto.team.dto
 
 // TODO: implement the exact response DTOs from specification §5.5 (Long IDs, null fields, dates).
 class ProfileDto

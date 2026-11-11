@@ -1,6 +1,8 @@
-package ru.nto.team
+package ru.nto.team.controller
 
 import org.springframework.web.bind.annotation.*
+import ru.nto.team.DecisionBody
+import ru.nto.team.service.RequestService
 
 // TODO: decision behavior. The admin-key check is already protected infrastructure.
 @RestController

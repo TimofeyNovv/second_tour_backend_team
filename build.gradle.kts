@@ -19,6 +19,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.10.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 tasks.withType<Test>().configureEach {

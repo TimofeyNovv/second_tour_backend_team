@@ -1,4 +1,4 @@
-package ru.nto.team
+package ru.nto.team.entity
 
 import java.time.LocalDateTime
 

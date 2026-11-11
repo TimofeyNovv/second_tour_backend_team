@@ -1,4 +1,4 @@
-package ru.nto.team
+package ru.nto.team.repository
 
 // TODO: extend JpaRepository only after the corresponding JPA model is connected.
 // These interfaces are intentionally not active Spring Data repositories yet.
