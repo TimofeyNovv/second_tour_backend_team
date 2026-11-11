@@ -2,7 +2,6 @@ package ru.nto.team.entity
 
 import jakarta.persistence.*
 
-
 @Entity
 @Table(name = "staff")
 open class Staff(

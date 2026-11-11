@@ -4,12 +4,10 @@ import ru.nto.team.entity.PassRequest
 import ru.nto.team.entity.RequestStatus
 import java.time.LocalDateTime
 
-data class ProfileDto(
-    val name: String,
-)
+data class ProfileDto(val name: String)
 
 data class RequestListDto(
-    val id:Long,
+    val id: Long,
     val fullName: String,
     val validFrom: LocalDateTime,
     val validTo: LocalDateTime,
@@ -22,7 +20,7 @@ data class RequestDetailsDto(
     val phone: String,
     val organization: String?,
     val purpose: String,
-    val validFrom:LocalDateTime,
+    val validFrom: LocalDateTime,
     val validTo: LocalDateTime,
     val status: RequestStatus,
     val comment: String?,
@@ -30,34 +28,28 @@ data class RequestDetailsDto(
     val updatedAt: LocalDateTime,
 )
 
-data class ErrorDto(
-    val error: String,
+data class ErrorDto(val error: String)
+
+data class ValidationErrorsDto(val errors: Map<String, String>)
+
+fun PassRequest.toListDto(): RequestListDto = RequestListDto(
+    id = id,
+    fullName = fullName,
+    validFrom = validFrom,
+    validTo = validTo,
+    status = status,
 )
 
-data class ValidationErrorsDto(
-    val errors: Map<String,String>,
+fun PassRequest.toDetailsDto(): RequestDetailsDto = RequestDetailsDto(
+    id = id,
+    fullName = fullName,
+    phone = phone,
+    organization = organization,
+    purpose = purpose,
+    validFrom = validFrom,
+    validTo = validTo,
+    status = status,
+    comment = comment,
+    createdAt = createdAt,
+    updatedAt = updatedAt,
 )
-
-fun PassRequest.toListDto(): RequestListDto =
-    RequestListDto(
-        id = id,
-        fullName = fullName,
-        validFrom = validFrom,
-        validTo = validTo,
-        status = status,
-    )
-
-fun PassRequest.toDetailsDto(): RequestDetailsDto =
-    RequestDetailsDto(
-        id = id,
-        fullName =fullName,
-        phone = phone,
-        organization = organization,
-        purpose = purpose,
-        validFrom = validFrom,
-        validTo = validTo,
-        status = status,
-        comment = comment,
-        createdAt = createdAt,
-        updatedAt = updatedAt,
-    )

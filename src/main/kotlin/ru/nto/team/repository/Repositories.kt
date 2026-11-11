@@ -14,19 +14,11 @@ interface StaffRepository : JpaRepository<Staff, Long> {
 
 interface PassRequestRepository : JpaRepository<PassRequest, Long> {
 
-    fun findAllByHost_IdOrderByValidFromAscIdAsc(
-        hostId: Long,
-    ): List<PassRequest>
+    fun findAllByHost_IdOrderByValidFromAscIdAsc(hostId: Long): List<PassRequest>
 
-    fun findAllByHost_IdAndStatusOrderByValidFromAscIdAsc(
-        hostId: Long,
-        status: RequestStatus,
-    ): List<PassRequest>
+    fun findAllByHost_IdAndStatusOrderByValidFromAscIdAsc(hostId: Long, status: RequestStatus): List<PassRequest>
 
-    fun findByIdAndHost_Id(
-        id: Long,
-        hostId: Long,
-    ): PassRequest?
+    fun findByIdAndHost_Id(id: Long, hostId: Long): PassRequest?
 
     @Query(
         """
